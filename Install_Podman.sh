@@ -8,8 +8,8 @@ rc-service cgroups start
 
 modprobe tun
 echo tun >>/etc/modules
-echo <USER>:100000:65536 >/etc/subuid
-echo <USER>:100000:65536 >/etc/subgid
+echo donnbk:100000:65536 >/etc/subuid
+echo donnbk:100000:65536 >/etc/subgid
 
 apk add findmnt
 
