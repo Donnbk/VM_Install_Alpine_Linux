@@ -1,0 +1,41 @@
+source: https://wiki.alpinelinux.org/wiki/Xfce#Starting_Xfce
+
+```
+setup-devd udev
+apk add dbus
+setup-xorg-base
+```
+
+```
+setup-desktop xfce
+```
+
+```
+rc-update add dbus
+```
+
+```
+rc-service lightdm start
+rc-update add lightdm
+```
+
+```
+apk add open-vm-tools 
+apk add open-vm-tools-guestinfo 
+apk add open-vm-tools-deploypkg
+apk add open-vm-tools-gtk
+rc-service open-vm-tools start
+rc-update add open-vm-tools boot
+```
+
+```
+apk add xf86-video-vmware
+```
+
+```
+apk add adwaita-xfce-icon-theme adw-gtk3
+```
+
+```
+apk add xfce-polkit
+```

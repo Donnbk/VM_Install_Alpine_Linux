@@ -1,0 +1,28 @@
+# How to run a bash script on Alpine Linux
+
+1. Ensure Bash is Installed:
+
+Alpine Linux uses ash as its default shell, not bash.
+Install bash using the package manager: 
+```
+apk add bash
+```
+
+2. Make the Script Executable:
+
+Use chmod +x to make the script executable: 
+```
+chmod +x your_script.sh
+```
+
+3. Run the Script:
+
+Execute the script using bash followed by the script's path: 
+```
+bash ./your_script.sh
+```
+
+Alternatively, if the script has a shebang (#!/bin/bash) line:
+```
+./your_script.sh
+```

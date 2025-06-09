@@ -1,0 +1,10 @@
+apk add xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter font-dejavu
+rc-service lightdm start
+rc-update add lightdm
+
+apk add adwaita-xfce-icon-theme adw-gtk3
+
+apk add xfce-polkit
+
+
+

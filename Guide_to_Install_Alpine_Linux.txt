@@ -1,0 +1,15 @@
+## Install Alpine linux
+
+root
+root
+setup-alpine
+keyboard layout: us
+hostname: msi
+network: enter
+dns servers: enter
+timezone: Asia > Ho_Chi_Minh
+mirror: f
+NTP: enter
+SSH: enter
+
+source: https://wiki.alpinelinux.org/wiki/Installation
