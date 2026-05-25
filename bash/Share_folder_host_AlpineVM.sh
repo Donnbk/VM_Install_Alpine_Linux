@@ -20,4 +20,4 @@ rc-update add local boot
 
 echo "fuse" >> /etc/modules
 
-
+ln -s /mnt/hgfs host-shared

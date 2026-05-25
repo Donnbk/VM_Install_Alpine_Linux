@@ -43,6 +43,16 @@ rc-update add local boot
 echo "fuse" >> /etc/modules
 ```
 
+```
+ln -s /mnt/hgfs host-shared
+```
+
 ### Check
+```
 rc-status boot
+
+/etc/local.d/mount-hgfs.start
+
+ls -la /mnt/hgfs
+```
 
