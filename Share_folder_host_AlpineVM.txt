@@ -1,0 +1,48 @@
+1. Enable Shared Folders in VMware
+ + Ensure the Alpine VM is powered off
+ + Options > Shared Folders > Always enabled > Add > Finish > OK
+
+2. Install VMware Tools in Alpine Linux
+```
+apk update
+apk add open-vm-tools open-vm-tools-hgfs
+```
+
+3. Add VMware drivers to the boot list with the system and launch the service
+```
+rc-update add open-vm-tools boot
+rc-service open-vm-tools start
+```
+
+4. Mount the Shared Folder
+```
+mkdir -p /mnt/hgfs
+```
+
+5.  Ensure the folder mounts automatically every time your Alpine VM boots
+```
+vi /etc/local.d/mount-hgfs.start
+```
+Paste into the file:
+[
+#!/bin/sh
+modprobe fuse
+sleep 1
+/usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+]
+
+```
+chmod +x /etc/local.d/mount-hgfs.start
+```
+
+```
+rc-update add local boot
+```
+
+```
+echo "fuse" >> /etc/modules
+```
+
+### Check
+rc-status boot
+
